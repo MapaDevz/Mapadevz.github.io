@@ -1,0 +1,68 @@
+body{
+    text-align: center;
+    background-color: rgb(241, 249, 72);
+}
+
+h1{
+    font-size: 100px;
+}
+
+p, h2{
+    font-size: 50px;
+}
+
+h1, h2{
+
+color: rgb(255, 145, 0);
+
+}
+
+body {
+    font-size: 1.2em;
+    font-size: 1.2em;
+    display: grid;
+    min-height: 100vh;
+    justify-content: center;
+    align-content: center;
+  }
+  .heart{
+    --size: 100px;
+    --color: red;
+    transform:rotate(45deg);
+    animation:beat 1s infinite alternate ease-in-out;
+  }
+  @keyframes beat{
+    to{
+      transform: rotate(45deg) scale(1.05);
+    }
+  }
+  
+  .heart,
+  .heart::before,
+  .heart::after{
+      width: var(--size);
+      height: var(--size);
+      background:var(--color);
+  }
+  .heart::before,
+  .heart::after{
+    content:'';
+    display: block;
+    border-radius:50%;
+  }
+  .heart::before{
+    margin-top: calc(var(--size)*-.5);
+   
+  }
+  .heart::after{
+    margin-top: calc(var(--size)* -0.5);
+    margin-left: calc(var(--size)* -0.5);
+  }
+  
+div{
+    margin: 0 auto;
+} 
+
+#texto{
+    margin-bottom: 100px;
+}
